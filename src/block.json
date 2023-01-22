@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/liber-calendar",
+  "version": "0.1.0",
+  "title": "Liber Calendar",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "supports": {
+	"html": false
+  },
+  "textdomain": "liber-calendar",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": [
+	"file:./calendar.js"
+  ],
+  "attributes": {
+	"description": {
+	  "type": "string",
+	  "selector": "p"
+	}
+  }
+}
