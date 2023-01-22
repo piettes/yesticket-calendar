@@ -1,6 +1,6 @@
 const googleCalendarBaseUrl = "https://www.googleapis.com/calendar/v3/calendars";
 const calendarId = "ac667b932cd08fb6f8af3792b961b4c92867e201bea405de2251f891588884c7@group.calendar.google.com";
-const APIKey = "AIzaSyBZPvB_fAJWm5Tm6b61pl0ErLNkwuscI70";
+const googleAPIKey = "";
 
 const yesticketBaseUrl = "https://www.yesticket.org/api/events-endpoint.php";
 
@@ -21,7 +21,7 @@ const fetchEventsGoogle = (monthOffset = 0) => {
 	const firstDay = new Date(offsetDate.getFullYear(), offsetDate.getMonth(), 1);
 	const firstDayNextMonth = new Date(offsetDate.getFullYear(), offsetDate.getMonth() + 1, 1);
 
-	const googleCalendarUrl = `${googleCalendarBaseUrl}/${calendarId}/events?key=${APIKey}&timeMax=${firstDayNextMonth.toISOString()}&timeMin=${firstDay.toISOString()}`;
+	const googleCalendarUrl = `${googleCalendarBaseUrl}/${calendarId}/events?key=${googleAPIKey}&timeMax=${firstDayNextMonth.toISOString()}&timeMin=${firstDay.toISOString()}`;
 
 	return fetch(googleCalendarUrl)
 		.then(result => result.json())
